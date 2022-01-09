@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Transacción Bancaria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="full" class="ion-no-margin">
+    <ion-list-header lines="full">
+      <ion-label>
+        Realizar Depósito  Bancario
+      </ion-label>
+    </ion-list-header>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="font-size: 20px">Cantidad a Depositar:</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-label position="fixed">Monto:</ion-label>
+        <ion-input [(ngModel)]="monto" placeholder="$ 00.00"></ion-input>
+      </ion-item>
+    </ion-card> 
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="font-size: 20px">Datos del Beneficiario</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-label position="fixed">Cédula:</ion-label>
+        <ion-input [(ngModel)]="cedulaBeneficiario" placeholder="Número de Cédula"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Cuenta:</ion-label>
+        <ion-input [(ngModel)]="cuentaBeneficiario" placeholder="Número de Cuenta"></ion-input>
+      </ion-item>
+      
+    </ion-card> 
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="font-size: 20px">Información del Depositante</ion-card-title>
+      </ion-card-header>
+
+      <ion-item>
+        <ion-label position="fixed">Cédula</ion-label>
+        <ion-input [(ngModel)]="cedulaDepositante" placeholder="Numero de Cédula"></ion-input>
+      </ion-item>
+  
+    </ion-card> 
+
+    <section>
+      <ion-button expand="block" (click)='makeTransaction()'>Realizar Deposito</ion-button>
+    </section>
+
+  </ion-list>
+
+ 
+
+</ion-content>
